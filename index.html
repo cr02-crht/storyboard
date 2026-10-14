@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1 Storyboard</title>
+<meta name="description" content="Storyboard for the Module 1 video: Before You Start. Internal use only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cr-blue: #1502CD;
+    --cr-navy: #0F3399;
+    --cr-yellow: #FAB805;
+    --bg: #F2F2F2;
+    --surface: #FFFFFF;
+    --text: #000000;
+    --text-muted: #434343;
+    --border: #DADADA;
+    --heading: #1502CD;
+    --row-alt: #FAFAFA;
+    --tag-win-bg: #E6E9F7;
+    --tag-win-text: #0F3399;
+    --tag-mac-bg: #EFE6F7;
+    --tag-mac-text: #6703B9;
+    --tag-all-bg: #EDEDED;
+    --tag-all-text: #434343;
+    --gradient: linear-gradient(150deg, #150DC4, #5705CD);
+    --font: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121212;
+      --surface: #1C1C1C;
+      --text: #F2F2F2;
+      --text-muted: #AFAFAF;
+      --border: #333333;
+      --heading: #9C93FF;
+      --row-alt: #202020;
+      --tag-win-bg: #1E2A55;
+      --tag-win-text: #B9C6F5;
+      --tag-mac-bg: #34204A;
+      --tag-mac-text: #D7B8F5;
+      --tag-all-bg: #2C2C2C;
+      --tag-all-text: #CFCFCF;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121212;
+    --surface: #1C1C1C;
+    --text: #F2F2F2;
+    --text-muted: #AFAFAF;
+    --border: #333333;
+    --heading: #9C93FF;
+    --row-alt: #202020;
+    --tag-win-bg: #1E2A55;
+    --tag-win-text: #B9C6F5;
+    --tag-mac-bg: #34204A;
+    --tag-mac-text: #D7B8F5;
+    --tag-all-bg: #2C2C2C;
+    --tag-all-text: #CFCFCF;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  header {
+    background: var(--gradient);
+    color: #FFFFFF;
+    padding: 40px 16px 36px;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+  header .wrap { padding: 0; max-width: 1168px; }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    margin: 0 0 20px;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+  }
+  .meta b { font-weight: 700; }
+  .internal {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--cr-yellow);
+    color: #000000;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  main { padding: 32px 0 48px; }
+  h2 {
+    color: var(--heading);
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 14px;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  table {
+    width: 100%;
+    min-width: 860px;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  thead th {
+    background: var(--cr-blue);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:last-child td { border-bottom: 0; }
+  .col-shot { width: 70px; }
+  .col-visual { width: 38%; }
+  .col-dur { width: 90px; white-space: nowrap; }
+  .shot { font-weight: 900; color: var(--heading); font-size: 16px; }
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 6px;
+  }
+  .tag-win { background: var(--tag-win-bg); color: var(--tag-win-text); }
+  .tag-mac { background: var(--tag-mac-bg); color: var(--tag-mac-text); }
+  .tag-all { background: var(--tag-all-bg); color: var(--tag-all-text); }
+  .url {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 13.5px;
+    word-break: break-all;
+  }
+  .vo { font-style: italic; color: var(--text); }
+  tfoot td {
+    font-weight: 700;
+    background: var(--surface);
+    border-top: 2px solid var(--border);
+  }
+
+  footer {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+    padding: 0 16px 32px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Video Storyboard</p>
+    <h1>Module 1 · Before You Start</h1>
+    <ul class="meta">
+      <li><b>Format:</b> Plain screen recording + casual voiceover</li>
+      <li><b>Language:</b> English</li>
+      <li><b>Target duration:</b> ±2:25</li>
+      <li><b>Audience:</b> CRHT team (non-IT friendly)</li>
+    </ul>
+    <span class="internal">Internal use only</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <h2>Shot list</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-shot">Shot</th>
+              <th class="col-visual">Visual</th>
+              <th>Audio (Narration)</th>
+              <th class="col-dur">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="shot">01</td>
+              <td><span class="tag tag-win">Windows</span><br>Chrome. Open <span class="url">https://code.claude.com/docs/en/desktop-quickstart</span>. The page shows the heading "Get started with the desktop app".</td>
+              <td class="vo">"Hi everyone! Before we jump into Claude Code, let's get five things ready: the app, Git, a Claude.ai account, a project folder, and access to the CRHT Team Drive. No installing yet, just getting ready. I'll show both Windows and Mac."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">02</td>
+              <td><span class="tag tag-all">Both</span><br>Same page, no scrolling. Move the cursor slowly over the second paragraph below the heading ("The desktop app gives you Claude Code with a graphical interface… in the <b>Code</b> tab.").</td>
+              <td class="vo">"First up, the Claude Code desktop app. It's an actual app on your computer, not a website, and everything in this course happens in its Code tab."</td>
+              <td>12s</td>
+            </tr>
+            <tr>
+              <td class="shot">03A</td>
+              <td><span class="tag tag-win">Windows</span><br>Same page. Click the <b>Download for Windows</b> box, and the setup file appears in Chrome's downloads. Then click the <b>star icon</b> in the address bar to bookmark the page.</td>
+              <td class="vo">"On Windows, click Download for Windows. The setup file will show up in your Downloads folder. And while you're here, bookmark this page. Just click the star up here."</td>
+              <td>14s</td>
+            </tr>
+            <tr>
+              <td class="shot">03B</td>
+              <td><span class="tag tag-mac">Mac</span><br>Same URL on a Mac. Click the <b>Download for macOS</b> box, and the setup file appears in downloads. Press <b>Cmd+D</b> to bookmark.</td>
+              <td class="vo">"On a Mac, click Download for macOS instead, and bookmark it too. Don't open the setup file yet, though. We'll do that together in the next module."</td>
+              <td>12s</td>
+            </tr>
+            <tr>
+              <td class="shot">04</td>
+              <td><span class="tag tag-win">Windows</span><br>New tab. Open <span class="url">https://git-scm.com/download/win</span>. Click the first download link at the top of the page, and the setup file appears in downloads.</td>
+              <td class="vo">"Next, Git. It's a free tool that runs quietly in the background. You'll never open it yourself, but Claude Code uses it for some features, like working on several tasks at once. On Windows, click the first download link at the top of the page. It'll save to your Downloads folder. Keep it for the next module."</td>
+              <td>16s</td>
+            </tr>
+            <tr>
+              <td class="shot">04B</td>
+              <td><span class="tag tag-mac">Mac</span><br>Just the Mac Desktop, nothing opened.</td>
+              <td class="vo">"Mac users, good news: most Macs already come with Git, so there's nothing to download here. We'll quickly check yours in the next module."</td>
+              <td>12s</td>
+            </tr>
+            <tr>
+              <td class="shot">05</td>
+              <td><span class="tag tag-all">Both</span><br>New tab. Open <span class="url">https://claude.ai</span> and show the sign-in page. Don't log in.</td>
+              <td class="vo">"Number three, your Claude.ai account. We're using our CRHT Team account, so sign in with your team email account, not a personal one. Please don't sign up for a free account. Claude Code doesn't work on the free plan. It's the same login here and in the app."</td>
+              <td>14s</td>
+            </tr>
+            <tr>
+              <td class="shot">06A</td>
+              <td><span class="tag tag-win">Windows</span><br>Desktop. Right-click the Desktop, then <b>New</b>, then <b>Folder</b>. Name it <b>Claude Projects</b>.</td>
+              <td class="vo">"Number four, a project folder. Nothing fancy. On Windows, right-click your Desktop, then New, then Folder, and give it a name."</td>
+              <td>10s</td>
+            </tr>
+            <tr>
+              <td class="shot">06B</td>
+              <td><span class="tag tag-mac">Mac</span><br>Desktop. Right-click the Desktop, then <b>New Folder</b>. Name it <b>Claude Projects</b>.</td>
+              <td class="vo">"On a Mac, it's right-click, then New Folder. Claude Code only works with files inside the folder you give it."</td>
+              <td>8s</td>
+            </tr>
+            <tr>
+              <td class="shot">07</td>
+              <td><span class="tag tag-all">Both</span><br>Browser. Open <span class="url">https://drive.google.com</span>, then <b>Shared drives</b>, then <b>CRHT Team Drive</b>, then <b>10. AI Transformation</b>, then <b>Claude Skills</b>. File names are blurred.</td>
+              <td class="vo">"And the last one, the CRHT Team Drive. Go to Shared drives, CRHT Team Drive, 10. AI Transformation, then Claude Skills. That's where our skill files live for the next module."</td>
+              <td>12s</td>
+            </tr>
+            <tr>
+              <td class="shot">08</td>
+              <td><span class="tag tag-all">Both</span><br>Back to the <span class="url">code.claude.com/docs/en/desktop-quickstart</span> tab.</td>
+              <td class="vo">"And that's it! No terminal, no code editor, nothing else. Just check you've got all five: the page bookmarked, you know if you're on Windows or Mac, your team Claude.ai login, your project folder, and access to the skills folder. Got them? See you in the next module!"</td>
+              <td>20s</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total</td>
+              <td>±2:25</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>CrescentRating · HalalTrip · Internal training material</footer>
+
+</body>
+</html>
