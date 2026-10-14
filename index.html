@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Module 1 Storyboard</title>
-<meta name="description" content="Storyboard for the Module 1 video: Before You Start. Internal use only.">
+<title>Course Video Storyboards</title>
+<meta name="description" content="Storyboards for the Claude Code course videos: Module 1 (Before You Start) and Module 3 (Install and Configure Claude Code). Internal use only.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -20,6 +20,10 @@
     --border: #DADADA;
     --heading: #1502CD;
     --row-alt: #FAFAFA;
+    --part-bg: #E6E9F7;
+    --part-text: #0F3399;
+    --note-bg: #FFF6DC;
+    --note-border: #FAB805;
     --gradient: linear-gradient(150deg, #150DC4, #5705CD);
     --font: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
@@ -32,6 +36,10 @@
       --border: #333333;
       --heading: #9C93FF;
       --row-alt: #202020;
+      --part-bg: #1E2A55;
+      --part-text: #B9C6F5;
+      --note-bg: #2E2614;
+      --note-border: #B98A0A;
     }
   }
   :root[data-theme="dark"] {
@@ -42,10 +50,15 @@
     --border: #333333;
     --heading: #9C93FF;
     --row-alt: #202020;
+    --part-bg: #1E2A55;
+    --part-text: #B9C6F5;
+    --note-bg: #2E2614;
+    --note-border: #B98A0A;
   }
 
   * { box-sizing: border-box; }
   html, body { margin: 0; }
+  html { scroll-behavior: smooth; }
   body {
     background: var(--bg);
     color: var(--text);
@@ -95,14 +108,49 @@
     padding: 4px 10px;
     border-radius: 4px;
   }
+  .module-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .module-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+  }
+  .module-nav a:hover { background: rgba(255, 255, 255, 0.15); }
 
   main { padding: 32px 0 48px; }
+  .module { scroll-margin-top: 16px; }
+  .module + .module { margin-top: 56px; }
   h2 {
     color: var(--heading);
-    font-weight: 700;
-    font-size: 22px;
-    margin: 0 0 14px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 0 0 10px;
   }
+  .module .meta {
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .goal { margin: 0 0 14px; max-width: 900px; }
+  .note {
+    background: var(--note-bg);
+    border-left: 4px solid var(--note-border);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 0 0 18px;
+    font-size: 15px;
+    max-width: 900px;
+  }
+  .note p { margin: 0; }
+  .note p + p { margin-top: 6px; }
 
   .table-scroll {
     overflow-x: auto;
@@ -133,6 +181,13 @@
   }
   tbody tr:nth-child(even) { background: var(--row-alt); }
   tbody tr:last-child td { border-bottom: 0; }
+  tbody tr.part td {
+    background: var(--part-bg);
+    color: var(--part-text);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
   .col-shot { width: 70px; }
   .col-visual { width: 38%; }
   .col-dur { width: 90px; white-space: nowrap; }
@@ -161,15 +216,18 @@
 
 <header>
   <div class="wrap">
-    <p class="eyebrow">Video Storyboard</p>
-    <h1>Module 1 · Before You Start</h1>
+    <p class="eyebrow">Video Storyboards</p>
+    <h1>Claude Code Course for CRHT</h1>
     <ul class="meta">
       <li><b>Format:</b> Plain screen recording + casual voiceover</li>
       <li><b>Recorded on:</b> Windows (Mac steps covered in narration)</li>
       <li><b>Language:</b> English</li>
-      <li><b>Target duration:</b> ±2:15</li>
       <li><b>Audience:</b> CRHT team (non-IT friendly)</li>
     </ul>
+    <nav class="module-nav" aria-label="Modules">
+      <a href="#module-1">Module 1 · Before You Start</a>
+      <a href="#module-3">Module 3 · Install and Configure</a>
+    </nav>
     <span class="internal">Internal use only</span>
   </div>
 </header>
@@ -177,8 +235,11 @@
 <main>
   <div class="wrap">
 
-    <section>
-      <h2>Shot list</h2>
+    <section class="module" id="module-1">
+      <h2>Module 1 · Before You Start</h2>
+      <ul class="meta">
+        <li><b>Target duration:</b> ±2:15</li>
+      </ul>
       <div class="table-scroll">
         <table>
           <thead>
@@ -211,19 +272,19 @@
             <tr>
               <td class="shot">03B</td>
               <td>Same page, no click. Move the cursor to the <b>Download for macOS</b> box and hold for a moment.</td>
-              <td class="vo">"On a Mac, click Download for macOS instead. Either way, don't open the setup file yet. We'll do that together in the next module."</td>
+              <td class="vo">"On a Mac, click Download for macOS instead. Either way, don't open the setup file yet. We'll do that together in Module 3."</td>
               <td>10s</td>
             </tr>
             <tr>
               <td class="shot">04</td>
               <td>New tab. Open <span class="url">https://git-scm.com/download/win</span>. Click the first download link at the top of the page, and the setup file appears in downloads.</td>
-              <td class="vo">"Next, Git. It's a free tool that runs quietly in the background. You'll never open it yourself, but Claude Code uses it for some features, like working on several tasks at once. On Windows, click the first download link at the top of the page. It'll save to your Downloads folder. Keep it for the next module."</td>
+              <td class="vo">"Next, Git. It's a free tool that runs quietly in the background. You'll never open it yourself, but Claude Code uses it for some features, like working on several tasks at once. On Windows, click the first download link at the top of the page. It'll save to your Downloads folder. Keep it for Module 3."</td>
               <td>16s</td>
             </tr>
             <tr>
               <td class="shot">04B</td>
               <td>Same Git tab, no click. Let the page sit while the narration plays.</td>
-              <td class="vo">"Mac users, good news: most Macs already come with Git, so there's nothing to download here. We'll quickly check yours in the next module."</td>
+              <td class="vo">"Mac users, good news: most Macs already come with Git, so there's nothing to download here."</td>
               <td>10s</td>
             </tr>
             <tr>
@@ -261,6 +322,145 @@
             <tr>
               <td colspan="3">Total</td>
               <td>±2:15</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="module" id="module-3">
+      <h2>Module 3 · Install and Configure Claude Code</h2>
+      <ul class="meta">
+        <li><b>Target duration:</b> ±4:30</li>
+        <li><b>Covers:</b> install the app · install Git the right way · Chat, Cowork &amp; Code · connect the project folder</li>
+      </ul>
+      <p class="goal">Get the tools onto your computer: install the Claude Code desktop app, install Git the correct way, learn where Chat, Cowork and Code live, and point Claude at the project folder from Module 1. This is the module where careful clicking matters most.</p>
+      <div class="note">
+        <p><b>Recorded on the current app version.</b> In the latest desktop app, the sidebar has two icons at the top: Chat and Code (<b>&lt;/&gt;</b>). Cowork is no longer a separate tab. It's a <b>Chat | Cowork</b> switch inside the Chat prompt box. The Module 3 brief and the Quick Reference Card still describe three tabs, so they should be updated to match.</p>
+        <p>Blur the greeting name and email on screen. Don't name a specific model in the narration, since the default changes over time.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-shot">Shot</th>
+              <th class="col-visual">Visual</th>
+              <th>Audio (Narration)</th>
+              <th class="col-dur">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="part"><td colspan="4">Part 1 · Install the Claude Code app</td></tr>
+            <tr>
+              <td class="shot">01</td>
+              <td>File Explorer, then <b>Downloads</b>. The two setup files from Module 1 are visible: Claude and Git.</td>
+              <td class="vo">"Welcome back! Remember the two setup files from Module 1? Today we install them: the Claude Code app first, then Git. After that, a quick tour of the app, and we'll connect your project folder. Take it slow. There's one Git screen we need to get exactly right."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">02</td>
+              <td>Double-click the Claude setup file. Windows asks "Do you want to allow this app to make changes?", click <b>Yes</b>. The installer runs.</td>
+              <td class="vo">"Double-click the Claude setup file. If Windows asks whether to allow changes, click Yes, then let it install. It only takes a moment."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">03</td>
+              <td>Install progress still running, no clicks.</td>
+              <td class="vo">"On a Mac, open the downloaded file and drag Claude into your Applications folder. Same app, same steps from here."</td>
+              <td>10s</td>
+            </tr>
+            <tr>
+              <td class="shot">04</td>
+              <td>The app opens on the sign-in screen. Sign in with the team email (email blurred). Once the home screen loads, close the app.</td>
+              <td class="vo">"Sign in with your CRHT team email, not a personal account. Once you're in, close the app for now. We'll come back after Git is installed."</td>
+              <td>20s</td>
+            </tr>
+            <tr class="part"><td colspan="4">Part 2 · Install Git the right way</td></tr>
+            <tr>
+              <td class="shot">05</td>
+              <td>Downloads. Double-click the Git setup file, click <b>Yes</b>, then <b>Next</b> on the licence screen.</td>
+              <td class="vo">"Now Git. Most guides online say 'just click Next on everything.' We'll do that too, except for one screen."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">06</td>
+              <td>Click <b>Next</b> through the default screens. Footage sped up 2x, on-screen caption "Keep clicking Next".</td>
+              <td class="vo">"Keep clicking Next. The default options are fine. Don't change anything until we reach the screen about the terminal."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">07</td>
+              <td>Screen <b>"Configuring the terminal emulator to use with Git Bash"</b>. Zoom in. Select <b>"Use Windows' default console window"</b> and hold for 3 seconds. Amber callout on screen.</td>
+              <td class="vo">"Stop here! This is the one that matters. The installer suggests MinTTY. Don't take it. Choose 'Use Windows' default console window' instead. Getting this wrong is the most common reason Claude Code doesn't work later. Double-check it, then click Next."</td>
+              <td>25s</td>
+            </tr>
+            <tr>
+              <td class="shot">08</td>
+              <td>Click <b>Next</b> to the last screen, then <b>Install</b>. Untick "View Release Notes", then <b>Finish</b>.</td>
+              <td class="vo">"From here, it's Next all the way, then Install. When it's done, untick the release notes and click Finish."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">09</td>
+              <td>The Finish screen stays visible, no clicks.</td>
+              <td class="vo">"Mac users, you can skip all of this. Git is usually already on your Mac. If your Mac ever pops up asking to install 'command line developer tools', just click Install. That's Git."</td>
+              <td>10s</td>
+            </tr>
+            <tr class="part"><td colspan="4">Part 3 · Chat, Cowork &amp; Code</td></tr>
+            <tr>
+              <td class="shot">10</td>
+              <td>Start menu, open <b>Claude</b>. The app lands on the Chat home screen. Hover over the two icons at the top of the sidebar: the chat bubble and <b>&lt;/&gt;</b>.</td>
+              <td class="vo">"Let's open Claude again. Look at the top of the sidebar. There are two icons: Chat and Code. Let's see what each one does."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">11</td>
+              <td>Chat home screen. Hover over the prompt box ("How can I help you today?"). Don't type.</td>
+              <td class="vo">"Chat is a normal conversation, just like claude.ai. It can't see your files."</td>
+              <td>10s</td>
+            </tr>
+            <tr>
+              <td class="shot">12</td>
+              <td>In the prompt box, click the <b>Cowork</b> side of the <b>Chat | Cowork</b> switch. Hold, then switch back to <b>Chat</b>.</td>
+              <td class="vo">"Inside Chat, there's this little switch for Cowork. Cowork is an assistant that works through tasks on its own in the background. Handy, but it's not what we'll use in this course."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">13</td>
+              <td>Click the <b>&lt;/&gt;</b> icon at the top of the sidebar. The Code screen opens.</td>
+              <td class="vo">"And this is Code, where vibecoding happens. Claude works directly with your project files, and this is where we'll spend the whole course. If it asks you to upgrade, you've signed in with the wrong account. Sign out and use your team email."</td>
+              <td>15s</td>
+            </tr>
+            <tr class="part"><td colspan="4">Part 4 · Connect your project folder</td></tr>
+            <tr>
+              <td class="shot">14</td>
+              <td>Code screen. Check that <b>Local</b> is selected below the prompt box, then click <b>Select folder…</b>, go to Desktop, choose <b>Claude Projects</b>, and confirm. The folder name appears in the session.</td>
+              <td class="vo">"Make sure Local is selected, so Claude works on your own computer. Click Select folder and choose the Claude Projects folder from Module 1. If you skipped that, make the folder on your Desktop first. Claude can only touch files inside this folder."</td>
+              <td>20s</td>
+            </tr>
+            <tr>
+              <td class="shot">15</td>
+              <td>Hover over the model name and effort level next to the send button. Open the dropdown briefly, then close it without changing anything.</td>
+              <td class="vo">"Next to the send button is the model and effort level. Leave the default for now. If you ever hit your usage limit, switching to a lighter model is the first thing to try."</td>
+              <td>15s</td>
+            </tr>
+            <tr>
+              <td class="shot">16</td>
+              <td>Click the permission mode button below the prompt box (it shows <b>Accept edits</b> by default). Choose the option that asks before each change. Use the label shown in the current app, for example <b>Ask permissions</b> or <b>Manual</b>.</td>
+              <td class="vo">"One more, and this one's important. This button controls how much Claude can do on its own. By default, it applies changes without asking. Switch it to the option that asks you first, so you approve every change. You stay in control."</td>
+              <td>20s</td>
+            </tr>
+            <tr>
+              <td class="shot">17</td>
+              <td>Code screen with the folder selected and an empty prompt box.</td>
+              <td class="vo">"That's it! The app's installed, Git's set up the right way, and Claude's connected to your folder. Don't type anything yet. We'll start using it in the next module. See you there!"</td>
+              <td>20s</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total</td>
+              <td>±4:30</td>
             </tr>
           </tfoot>
         </table>
